@@ -1,0 +1,167 @@
+/* Đặt màu nền hồng lung linh với hiệu ứng gradient */
+body {
+    background: linear-gradient(45deg, #ffccff, #ff99cc, #ff66b2, #ff80bf);
+    background-size: 400% 400%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientBG 10s ease infinite;
+    overflow: hidden;
+}
+
+/* Hiệu ứng gradient lung linh chuyển động */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hiệu ứng trái tim bay */
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://img.icons8.com/emoji/48/000000/red-heart.png');
+    background-size: contain;
+    animation: float 7s infinite;
+    opacity: 0.7;
+}
+
+.heart1 {
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.heart2 {
+    left: 50%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.heart3 {
+    left: 80%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        bottom: -50px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        bottom: 100vh;
+        transform: translateX(-30px);
+    }
+}
+
+/* Dòng chữ chúc mừng */
+.message h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 3s ease-in-out, glow 2s infinite alternate;
+}
+
+/* Hiệu ứng sáng lấp lánh cho chữ */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff66b2, 0 0 30px #ff66b2;
+    }
+    to {
+        text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff66b2, 0 0 40px #ff66b2;
+    }
+}
+
+/* Hiệu ứng đồng cỏ */
+.field {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top, #79c96b, #8bd17f);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Định dạng con thỏ và hiệu ứng nhảy */
+.bunny {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://img.icons8.com/ios-filled/100/ffffff/rabbit.png');
+    background-size: contain;
+    animation: hop 10s linear infinite;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.bunny1 {
+    top: 50px;
+    left: -60px;
+    animation-duration: 12s;
+}
+
+.bunny2 {
+    top: 120px;
+    left: -60px;
+    animation-duration: 15s;
+}
+
+.bunny3 {
+    top: 200px;
+    left: -60px;
+    animation-duration: 18s;
+}
+
+/* Hiệu ứng nhảy cho thỏ */
+@keyframes hop {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    25% {
+        transform: translateX(25%) translateY(-20px);
+    }
+    50% {
+        transform: translateX(50%) translateY(0px);
+    }
+    75% {
+        transform: translateX(75%) translateY(-20px);
+    }
+    100% {
+        transform: translateX(100vw) translateY(0px);
+    }
+}
+
+/* Hiệu ứng xuất hiện từ từ của chữ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
